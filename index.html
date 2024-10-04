@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 
@@ -106,19 +106,26 @@
             </div>
             <div class="box-input">
                 <p>Fotos do carro: <span class="required-field">*</span></p>
-                
-                <input type="file" accept="image/*" onchange="loadFile(event)" multiple>
-                <img id="output" style="max-width: 200px; display: block;"/>
+                <input id="files" type="file" accept="image/jpg, image/jpge, image/png" multiple>
+                <div id="preview"></div>
                 <script>
-                    var loadFile = function (event) {
-                        var reader = new FileReader();
-                        reader.onload = function () {
-                            var output = document.getElementById('output');
-                            output.src = reader.result;
+                    const preview = (file) => {
+                        const fr = new FileReader();
+                        fr.onload = () => {
+                            const img = document.createElement("img");
+                            img.src = fr.result;
+                            img.alt = file.name;
+                            document.querySelector('#preview').append(img);
                         };
-                        reader.readAsDataURL(event.target.files[0]);
+                        fr.readAsDataURL(file);
                     };
+
+                    document.querySelector("#files").addEventListener("change", (ev) => {
+                        if (!ev.target.files) return;
+                        [...ev.target.files].forEach(preview);
+                    });
                 </script>
+
             </div>
             <input type="submit" value="Enviar">
 

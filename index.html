@@ -18,7 +18,7 @@
                 <p>Formulário</p>
             </div>
             <div class="form-body">
-                <h1>Venda fácil seu carro</h1>
+                <h1 class="form-title">Venda fácil seu Jeep</h1>
                 <p>Descreva as caracteristicas e marque os opcionais que ele possui</p>
                 <form>
                     <div class="box-input">
@@ -33,8 +33,8 @@
                     </div>
                     <div class="box-input">
                         <label for="description">Descrição detalhada<span class="required-field">*</span></label>
-                        <textarea type="number" name="description" id="description" class="block"
-                            placeholder="Aqui você coloca os detalhes do veículo, por exemplo: se ele tem alguma marca de uso e qual"></textarea>
+                        <textarea type="number" name="description" id="description" class="block" rows="5"
+                            placeholder="Aqui você coloca os detalhes do veículo, por exemplo: se ele tem alguma marca de uso e qual."></textarea>
                     </div>
                     <div class="box-input">
                         <label for="brand">Marca<span class="required-field">*</span></label>
@@ -52,86 +52,142 @@
                             placeholder="Digite a kilimetragem veículo" required></input>
                     </div>
                     <div class="box-input"></div>
-                    <label for="color">Cor <small>(proximada)</small></label>
+                    <label for="color">Cor do Jeep <small>(proximada)</small></label>
                     <input type="color" name="color" id="color" class="block"></input>
-            </div>
-            <div class="box-input">
-                <label for="purchase_date">Data da compra<span class="required-field">*</span></label>
-                <input type="date" name="purchase_date" id="purchase_date" class="block" required></input>
-            </div>
-            <div class="box-input">
-                <p>Tipo de câmbio:<span class="required-field">*</span></p>
-                <input type="radio" name="gear" id="manual" required></input>
-                <label for="manual">Manual</label>
-                <input type="radio" name="gear" id="auto" required></input>
-                <label for="auto">Automatico</label>
-            </div>
+                    <div class="box-input">
+                        <label for="purchase_date">Data da compra<span class="required-field">*</span></label>
+                        <input type="date" name="purchase_date" id="purchase_date" class="block" required></input>
+                    </div>
+                    <div class="box-input">
+                        <p>Tipo de câmbio:<span class="required-field">*</span></p>
+                        <input type="radio" name="gear" id="manual" required></input>
+                        <label for="manual">Manual</label>
+                        <input type="radio" name="gear" id="auto" required></input>
+                        <label for="auto">Automatico</label>
+                    </div>
 
-            <div class="optional-box">
-                <p>Opcionais</p>
-                <ul class="opcional-list">
-                    <li>
-                        <input type="checkbox" name="opcional[]" id="airbag">
-                        <label for="airbag">Airbag</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="opcional[]" id="alam">
-                        <label for="alarm">Alarme</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="opcional[]" id="ac">
-                        <label for="ac">Ar Condicionado</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="opcional[]" id="reverse_camera">
-                        <label for="reverse_camera">Câmera de Ré</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="opcional[]" id="lane_assist">
-                        <label for="lane_assist">Assistente de Pista</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="opcional[]" id="keyless">
-                        <label for="keyless">Partida Keyless</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="opcional[]" id="smartphone">
-                        <label for="smartphone">Integração com Celular</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="opcional[]" id="leather_bench">
-                        <label for="leather_bench">Banco de Couro</label>
-                    </li>
-                </ul>
+                    <div class="optional-box">
+                        <p>Opcionais</p>
+                        <ul class="optional-list">
+                            <li>
+                                <input type="checkbox" name="opcional[]" id="airbag">
+                                <label for="airbag">Airbag</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="opcional[]" id="alam">
+                                <label for="alarm">Alarme</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="opcional[]" id="ac">
+                                <label for="ac">Ar Condicionado</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="opcional[]" id="reverse_camera">
+                                <label for="reverse_camera">Câmera de Ré</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="optional-box">
+                        <ul class="optional-list">
+
+                            <li>
+                                <input type="checkbox" name="opcional[]" id="lane_assist">
+                                <label for="lane_assist">Assistente de Pista</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="opcional[]" id="keyless">
+                                <label for="keyless">Partida Keyless</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="opcional[]" id="smartphone">
+                                <label for="smartphone">Integração com Celular</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="opcional[]" id="leather_bench">
+                                <label for="leather_bench">Banco de Couro</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box-input">
+                        <p>Fotos do carro: <span class="required-field">*</span></p>
+                        <input id="files" type="file" accept="image/jpg, image/jpge, image/png, image/webp" multiple>
+                        <div id="preview"></div>
+                        <script>
+                            const preview = (file) => {
+                                const fr = new FileReader();
+                                fr.onload = () => {
+                                    const img = document.createElement("img");
+                                    img.src = fr.result;
+                                    img.alt = file.name;
+                                    document.querySelector('#preview').append(img);
+                                };
+                                fr.readAsDataURL(file);
+                            };
+
+                            document.querySelector("#files").addEventListener("change", (ev) => {
+                                if (!ev.target.files) return;
+                                [...ev.target.files].forEach(preview);
+                            });
+                        </script>
+                    </div>
+                    <input type="submit" value="Enviar" class="btn-submit">
+                </form>
             </div>
-            <div class="box-input">
-                <p>Fotos do carro: <span class="required-field">*</span></p>
-                <input id="files" type="file" accept="image/jpg, image/jpge, image/png" multiple>
-                <div id="preview"></div>
-                <script>
-                    const preview = (file) => {
-                        const fr = new FileReader();
-                        fr.onload = () => {
-                            const img = document.createElement("img");
-                            img.src = fr.result;
-                            img.alt = file.name;
-                            document.querySelector('#preview').append(img);
-                        };
-                        fr.readAsDataURL(file);
-                    };
-
-                    document.querySelector("#files").addEventListener("change", (ev) => {
-                        if (!ev.target.files) return;
-                        [...ev.target.files].forEach(preview);
-                    });
-                </script>
-
-            </div>
-            <input type="submit" value="Enviar">
-
-            </form>
         </div>
-    </div>
+        <div class="info-text-jeep">
+            <p>Taxa Zero + Tabela Fipe Renegade, Compass e Commander.
+
+                Taxa de financiamento de 0% a.m., é válida para todas as versões Renegade 24/25 exceto 1.3 turbo.
+                Compass todas as versões 24/25, exceto Sport T270 e Commander 24/25 todas as versões. Entrada de 60% do
+                valor do veículo e saldo em 36 parcelas. Válido até 03/10/2024 ou enquanto durar o estoque de 50
+                unidades de cada modelo, prevalecendo o que ocorrer primeiro. O financiamento deverá ser realizado na
+                modalidade Crédito Direto ao Consumidor – CDC, Pessoa Física, com 30 dias de carência para pagamento da
+                1ª parcela e será acrescido o valor das tarifas, custos e impostos (I.O.F.). Todas as propostas estarão
+                sujeitas a aprovação de crédito. Consulte as condições gerais, tarifa, taxa de juros, encargos e o Custo
+                Efetivo Total (CET) do financiamento antes da contratação em qualquer uma das concessionárias
+                participantes. Condição exclusiva para canal Varejo.
+
+                Todas as ações divulgadas acima não contemplam veículos adquiridos por meio de modalidades de vendas
+                diretas, incluindo, mas sem se limitar, produtor rural, PCD, frota, taxista, locadoras, leilões e
+                seguradoras. A ação está sujeita a alteração sem aviso prévio. Consulte as configurações e
+                características dos modelos disponíveis em estoque em demais termos e condições em uma Concessionária
+                Jeep. Central de Relacionamento: 0800 7037 150. Imagens meramente ilustrativas.
+
+                Condição “100% FIPE” RENEGADE, COMPASS E COMMANDER
+
+                Avaliação de 100% da FIPE no seu seminovo de qualquer marca. Condição válida para a compra dos veículos
+                Renegade Longitude 24/25 e anteriores (condição válida também para o pacote Night Eagle 611-1LG-1 + OPT
+                BW4), Compass na versão Série S e Commander na versão Overland Hurricane. Oferta válida exclusivamente
+                para pessoa física que adquirir, na modalidade varejo, entre o período até 03/10/2024, ou enquanto durar
+                o estoque de 100 unidades para pronta entrega, prevalecendo o que ocorrer primeiro. Consulte o estoque
+                diretamente nas concessionárias JEEP. Frete incluso.
+
+                O veículo seminovo que atender os critérios abaixo relacionados será avaliado no valor da Tabela FIPE
+                (dados de referência de Agosto de 2024) limitado ao valor de R$140.000,00. O veículo seminovo deve,
+                necessariamente, enquadrar-se nos seguintes critérios: Ano de fabricação a partir de 2020, com no máximo
+                10.000 KM rodados por ano (considerando-se a média da quilometragem), em boas condições, pintura
+                original, sem avarias e/ou problemas mecânicos, com todas as revisões de fábrica realizadas nas
+                concessionárias e anotadas no manual e que tenha sido aprovado nos Laudos de Vistoria Veicular (EVC e
+                Cautelar). O Seminovo dado como parte de pagamento deverá estar com o IPVA 2024 quitado.
+
+                Caso o cliente opte pela compra de um modelo ou versão de veículo JEEP 0KM abaixo do valor atribuído à
+                FIPE do seu veículo usado, lhe será concedido pela concessionária um voucher com o crédito
+                correspondente à diferença entre valor do veículo novo e usado. O crédito deverá ser utilizado,
+                exclusivamente, em serviço e/ou produtos na Concessionária contratada. Essa promoção não contempla a
+                devolução de valor em espécie. Não são elegíveis para essa oferta táxi, veículos importados, veículos
+                comerciais e/ou modificados, veículos blindados, veículos com registros de sinistros, furtos, leilões e
+                recuperados, veículos com avarias presentes, veículos que não tenham passado pelas revisões de fábrica
+                nas concessionárias e anotadas no manual e veículos com qualquer tipo de ônus, débitos, dívidas,
+                encargos, restrições e multas. Caso o automóvel usado na troca esteja em nome de Pessoa Jurídica e o
+                novo automóvel será adquirido por Pessoa Física, deverá ser comprovado esse vínculo. Não são elegíveis à
+                promoção os casos em que o automóvel usado esteja em nome de Pessoa Física diferente daquela que está
+                adquirindo o veículo zero Km. No caso de o veículo usado estar em nome de parente de primeiro grau
+                (esposa/marido/filho, filha/ pai ou mãe), o vínculo dessas pessoas deverá ser comprovado por meio de
+                documentação complementar. Não serão aceitos outros níveis de parentesco que os citados acima.</p>
+        </div>
+        <footer>
+
+        </footer>
     </div>
 </body>
 

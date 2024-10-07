@@ -350,9 +350,12 @@ input:focus {
   }
   .ads {
     width: 100%;
+    margin-bottom: 30px;
   }
   .info-text-jeep {
     width: 90%;
+    margin-bottom: 30px;
+
   }
   .info-text-jeep p {
     font-size: 12px;
@@ -365,5 +368,11 @@ input:focus {
   }
   .footer-container{
     display: none;
+  }
+  .footer-copy p{
+    margin: 0;
+  }
+  footer{
+    padding: 70px ;
   }
 }

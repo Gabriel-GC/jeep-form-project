@@ -32,7 +32,7 @@ input[type="text"],
 input[type="number"],
 input[type="date"],
 input[type="file"] {
-  width: 400px;
+  width: 100%;
 }
 
 /* Botão Whatsapp */
@@ -300,9 +300,10 @@ input[type="color"]::-webkit-color-swatch {
 /* Text area */
 
 textarea {
-  width: 400px;
   padding: 5px;
   border-color: #ccc;
+  width: 100%;
+
 }
 
 /* Input data  */
@@ -317,4 +318,38 @@ input:focus {
   outline: none;
   background-color: #fdfdfd;
   font-family: ProximaNova, Arial, Sans-Serif;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 1200px) {
+
+  .form-container{
+    width: 75%;
+  }
+}
+
+
+/* Mobile Responsividade */
+
+@media screen and (max-width: 768px) {
+
+  .form-container{
+    width: 100%;
+  }
+  .btn-submit{
+    width: 100%;
+  }
+  .ads{
+    width: 100%;
+  }
+  .info-text-jeep{
+    width: 90%;
+  }
+  .info-text-jeep p{
+    font-size: 12px;
+  }
+  .footer-container{
+    padding: 70px 30px;
+  }
 }

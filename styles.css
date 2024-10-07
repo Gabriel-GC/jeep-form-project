@@ -242,7 +242,7 @@ footer {
   text-decoration: none;
   color: #929292;
 }
-.footer-content a:hover{
+.footer-content a:hover {
   text-decoration: underline;
 }
 .footer-content li {
@@ -254,21 +254,20 @@ footer {
   justify-content: center;
   color: #fff;
 }
-.footer-copy p{
+.footer-copy p {
   color: #fff;
   font-size: 12px;
   font-family: ProximaNova, Arial, Sans-Serif;
   letter-spacing: 0.5px;
   line-height: 2;
   margin-top: 40px;
-
 }
 .footer-copy a {
   font-family: "Roboto";
   color: #929292;
   text-decoration: none;
 }
-.footer-copy a:hover{
+.footer-copy a:hover {
   text-decoration: underline;
 }
 
@@ -303,7 +302,6 @@ textarea {
   padding: 5px;
   border-color: #ccc;
   width: 100%;
-
 }
 
 /* Input data  */
@@ -323,33 +321,49 @@ input:focus {
 /* Responsividade */
 
 @media screen and (max-width: 1200px) {
-
-  .form-container{
+  .form-container {
     width: 75%;
+  }
+  .ads {
+    width: 80%;
   }
 }
 
-
 /* Mobile Responsividade */
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
+  .mobile-ads {
+    display: none;
+  }
+}
 
-  .form-container{
+@media screen and (max-width: 768px) {
+  .header{
+    background-image: url(assets/jeep-capa-mobile.webp);
+  }
+  .form-container {
+    width: 100%;
+    top: 0;
+  }
+  .btn-submit {
     width: 100%;
   }
-  .btn-submit{
+  .ads {
     width: 100%;
   }
-  .ads{
-    width: 100%;
-  }
-  .info-text-jeep{
+  .info-text-jeep {
     width: 90%;
   }
-  .info-text-jeep p{
+  .info-text-jeep p {
     font-size: 12px;
   }
-  .footer-container{
+  .footer-container {
     padding: 70px 30px;
+  }
+  .desk-ads {
+    display: none;
+  }
+  .footer-container{
+    display: none;
   }
 }

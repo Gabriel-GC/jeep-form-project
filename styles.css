@@ -190,11 +190,13 @@ input[type="file"] {
 
 footer {
   display: flex;
-  padding: 20px;
+  padding: 70px 0;
   background-color: #000;
   color: #fff;
   font-size: 12px;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .footer-hub {
   width: 60px;
@@ -241,9 +243,34 @@ footer {
   text-decoration: none;
   color: #929292;
 }
+.footer-content a:hover{
+  text-decoration: underline;
+}
 .footer-content li {
   list-style: none;
   padding-bottom: 10px;
+}
+.footer-copy {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+.footer-copy p{
+  color: #fff;
+  font-size: 12px;
+  font-family: ProximaNova, Arial, Sans-Serif;
+  letter-spacing: 0.5px;
+  line-height: 2;
+  margin-top: 40px;
+
+}
+.footer-copy a {
+  font-family: "Roboto";
+  color: #929292;
+  text-decoration: none;
+}
+.footer-copy a:hover{
+  text-decoration: underline;
 }
 
 /* Inuput color custom */
@@ -263,6 +290,7 @@ input[type="color"] {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   margin: 10px 0 35px 0;
 }
+
 input[type="color"]::-webkit-color-swatch-wrapper {
   padding: 0;
 }

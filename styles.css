@@ -87,7 +87,6 @@ input[type="file"] {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  width: 100%;
 }
 
 /* Form container */
@@ -97,7 +96,7 @@ input[type="file"] {
   width: 50%;
   margin: 0 auto;
   position: relative;
-  top: -62px;
+  top: -5rem;
   margin-bottom: 50px;
 }
 

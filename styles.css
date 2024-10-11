@@ -5,6 +5,7 @@
   padding: 0;
   font-family: ProximaNova, Arial, Sans-Serif;
 }
+
 body {
   background-color: #e2e2e2;
 }
@@ -20,6 +21,7 @@ h5 {
 p,
 label {
   color: #444;
+  padding: 0 8px;
 }
 
 input {
@@ -35,7 +37,8 @@ input[type="file"] {
   width: 100%;
 }
 
-/* Botão Whatsapp */
+/*--------------------------------------------- Button Whatsapp */
+
 .whatsapp {
   position: fixed;
   bottom: 24px;
@@ -60,6 +63,7 @@ input[type="file"] {
   height: 38px;
   margin-right: 9px;
 }
+
 .icon-span {
   opacity: 0;
   overflow: hidden;
@@ -79,7 +83,7 @@ input[type="file"] {
   }
 }
 
-/* Page header */
+/*--------------------------------------------- Page header */
 .header {
   height: 500px;
   padding: 20px;
@@ -90,7 +94,6 @@ input[type="file"] {
 }
 
 /* Form container */
-
 .form-container {
   background-color: #fff;
   width: 50%;
@@ -100,7 +103,8 @@ input[type="file"] {
   margin-bottom: 50px;
 }
 
-/* Form header */
+/*--------------------------------------------- Form header*/
+
 .form-header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   height: 45px;
@@ -116,32 +120,41 @@ input[type="file"] {
   height: 45px;
   line-height: 45px;
 }
+
 .form-body {
   padding: 50px;
 }
+
 .form-body p {
   margin-bottom: 20px;
 }
+
 .form-title {
   margin-bottom: 20px;
 }
+
 .required-field {
   color: #d80835;
 }
+
 .block {
   display: block;
 }
+
 .box-input {
   margin-bottom: 35px;
 }
+
 .optional-box {
   display: inline-block;
   margin: 0 30px 30px 0;
 }
+
 .optional-list li {
   list-style: none;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
+
 .box-input p {
   margin-bottom: 15px;
 }
@@ -163,7 +176,8 @@ input[type="file"] {
   transition: ease-in-out 0.2s;
 }
 
-/* Info Jeep */
+/*--------------------------------------------- Info Jeep*/
+
 .info-text-jeep {
   width: 60%;
   margin: 0 auto;
@@ -172,10 +186,12 @@ input[type="file"] {
   padding: 15px;
   margin-bottom: 110px;
 }
+
 .info-text-jeep p {
   font-size: 10px;
   padding-bottom: 8px;
 }
+
 .ads {
   width: 65%;
   margin: 0 auto;
@@ -183,9 +199,12 @@ input[type="file"] {
   text-align: justify;
   margin-bottom: 110px;
 }
+
 .ads img {
   width: 100%;
 }
+
+/*--------------------------------------------- Footer */
 
 footer {
   display: flex;
@@ -197,11 +216,13 @@ footer {
   align-items: center;
   flex-direction: column;
 }
+
 .footer-hub {
   width: 60px;
   display: flex;
   flex-wrap: wrap;
 }
+
 .footer-hub a {
   width: 18px;
   height: 18px;
@@ -210,15 +231,19 @@ footer {
   background-repeat: no-repeat;
   margin: 0 0 10px 10px;
 }
+
 .facebook {
   background-image: url(./assets/icon-facebook.svg);
 }
+
 .instagram {
   background-image: url(./assets/icon-instagram.svg);
 }
+
 .x {
   background-image: url(./assets/twitter.png);
 }
+
 .youtube {
   background-image: url(./assets/icon-youtube.svg);
 }
@@ -231,29 +256,34 @@ footer {
   gap: 20px;
 }
 
-.footer-content h3 {
+.footer-content h2 {
   color: #fff;
   margin-bottom: 18px;
   text-transform: uppercase;
   font-size: 12px;
 }
+
 .footer-content a {
   font-family: "Roboto";
   text-decoration: none;
   color: #929292;
 }
+
 .footer-content a:hover {
   text-decoration: underline;
 }
+
 .footer-content li {
   list-style: none;
   padding-bottom: 10px;
 }
+
 .footer-copy {
   display: flex;
   justify-content: center;
   color: #fff;
 }
+
 .footer-copy p {
   color: #fff;
   font-size: 12px;
@@ -262,16 +292,40 @@ footer {
   line-height: 2;
   margin-top: 40px;
 }
+
 .footer-copy a {
   font-family: "Roboto";
   color: #929292;
   text-decoration: none;
 }
+
 .footer-copy a:hover {
   text-decoration: underline;
 }
 
-/* Inuput color custom */
+/*--------------------------------------------- Textarea */
+
+textarea {
+  padding: 5px;
+  border-color: #ccc;
+  width: 100%;
+}
+
+/*--------------------------------------------- Input data */
+
+input[type="date"] {
+  font-family: ProximaNova, Arial, Sans-Serif;
+}
+
+/*--------------------------------------------- Text input custom */
+
+input:focus {
+  outline: none;
+  background-color: #fdfdfd;
+  font-family: ProximaNova, Arial, Sans-Serif;
+}
+
+/*--------------------------------------------- Inuput color custom */
 
 #preview img {
   max-height: 100px;
@@ -292,33 +346,12 @@ input[type="color"] {
 input[type="color"]::-webkit-color-swatch-wrapper {
   padding: 0;
 }
+
 input[type="color"]::-webkit-color-swatch {
   border: none;
 }
 
-/* Text area */
-
-textarea {
-  padding: 5px;
-  border-color: #ccc;
-  width: 100%;
-}
-
-/* Input data  */
-
-input[type="date"] {
-  font-family: ProximaNova, Arial, Sans-Serif;
-}
-
-/* Text input custom */
-
-input:focus {
-  outline: none;
-  background-color: #fdfdfd;
-  font-family: ProximaNova, Arial, Sans-Serif;
-}
-
-/* Responsividade */
+/*--------------------------------------------- Responsive mode */
 
 @media screen and (max-width: 1200px) {
   .form-container {
@@ -329,7 +362,7 @@ input:focus {
   }
 }
 
-/* Mobile Responsividade */
+/*--------------------------------------------- Mobile */
 
 @media screen and (min-width: 768px) {
   .mobile-ads {
@@ -338,41 +371,56 @@ input:focus {
 }
 
 @media screen and (max-width: 768px) {
-  .header{
+  .header {
     background-image: url(assets/jeep-capa-mobile.webp);
   }
+
+  .optional-list li {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+  
+
   .form-container {
     width: 100%;
     top: 0;
   }
+
   .btn-submit {
     width: 100%;
   }
+
   .ads {
     width: 100%;
     margin-bottom: 30px;
   }
+
   .info-text-jeep {
     width: 90%;
     margin-bottom: 30px;
-
   }
+
   .info-text-jeep p {
     font-size: 12px;
   }
+
   .footer-container {
     padding: 70px 30px;
   }
+
   .desk-ads {
     display: none;
   }
-  .footer-container{
+
+  .footer-container {
     display: none;
   }
-  .footer-copy p{
+
+  .footer-copy p {
     margin: 0;
   }
-  footer{
-    padding: 70px ;
+
+  footer {
+    padding: 70px;
   }
 }

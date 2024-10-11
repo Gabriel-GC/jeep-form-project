@@ -10,14 +10,17 @@
 </head>
 
 <body>
+
     <a class="whatsapp"
         href="https://wa.me/5547999963122?text=Gostaria%20de%20or%C3%A7ar%20uma%20cria%C3%A7%C3%A3o%20de%20site%20contigo.">
-        <img src="assets/whatsapp-fab-icon.png" alt="" href="" class="icon-whatsapp">
+        <figure>
+            <img src="assets/whatsapp-fab-icon.png" alt="Whastapp Icone" class="icon-whatsapp">
+        </figure>
         <span class="icon-span">Quero um site!</span>
     </a>
-    <div class="container">
-        <div class="header">
-        </div>
+
+    <section class="container">
+        <div class="header"></div>
         <div class="form-container">
             <div class="form-header">
                 <p>Formulário</p>
@@ -27,47 +30,97 @@
                 <p>Descreva as caracteristicas e marque os opcionais que ele possui</p>
                 <form>
                     <div class="box-input">
-                        <label for="title">Título do anúncio <span class="required-field">*</span></label>
+                        <label for="title">
+                            Título do anúncio
+                            <span class="required-field">
+                                *
+                            </span>
+                        </label>
                         <input type="text" name="title" id="title" class="block"
-                            placeholder="Um título para anunciar seu carro" minlength="1" maxlength="30" required>
+                            placeholder="Um título para anunciar seu carro" aria-labelledby="title" required>
                     </div>
                     <div class="box-input">
-                        <label for="price">Preço<span class="required-field">*</span></label>
+                        <label for="price">
+                            Preço
+                            <span class="required-field">
+                                *
+                            </span>
+                        </label>
                         <input type="number" name="price" id="price" class="block" placeholder="Defina o preço"
-                            required>
+                            aria-labelledby="price" required>
                     </div>
                     <div class="box-input">
-                        <label for="description">Descrição detalhada<span class="required-field">*</span></label>
-                        <textarea type="number" name="description" id="description" class="block" rows="5"
+                        <label for="description">
+                            Descrição detalhada
+                            <span class="required-field">
+                                *
+                            </span>
+                        </label>
+                        <textarea type="text" name="description" id="description" class="block"
+                            aria-labelledby="description" rows="5"
                             placeholder="Aqui você coloca os detalhes do veículo, por exemplo: se ele tem alguma marca de uso e qual."></textarea>
                     </div>
                     <div class="box-input">
-                        <label for="brand">Marca<span class="required-field">*</span></label>
-                        <input type="text" name="brand" id="brand" class="block" placeholder="Digite a marca do veículo"
-                            required></input>
+                        <label for="brand">
+                            Marca
+                            <span class="required-field">
+                                *
+                            </span>
+                        </label>
+                        <input type="text" name="brand" id="brand" class="block" aria-labelledby="brand"
+                            placeholder="Digite a marca do veículo" required>
+                        </input>
                     </div>
                     <div class="box-input">
-                        <label for="model">Modelo<span class="required-field">*</span></label>
-                        <input type="text" name="model" id="model" class="block"
-                            placeholder="Digite o modelo e o ano do veículo" required></input>
+                        <label for="model">
+                            Modelo
+                            <span class="required-field">
+                                *
+                            </span>
+                        </label>
+                        <input type="text" name="model" id="model" class="block" aria-labelledby="model"
+                            placeholder="Digite o modelo e o ano do veículo" required>
+                        </input>
                     </div>
                     <div class="box-input">
-                        <label for="mileage">Kilimetragem<span class="required-field">*</span></label>
-                        <input type="number" name="mileage" id="mileage" class="block"
-                            placeholder="Digite a kilimetragem veículo" required></input>
+                        <label for="mileage">
+                            Kilimetragem
+                            <span class="required-field">
+                                *
+                            </span>
+                        </label>
+                        <input type="number" name="mileage" id="mileage" class="block" aria-labelledby="mileage"
+                            placeholder="Digite a kilimetragem veículo" required>
+                        </input>
                     </div>
                     <div class="box-input"></div>
-                    <label for="color">Cor do Jeep <small>(proximada)</small></label>
-                    <input type="color" name="color" id="color" class="block"></input>
+                    <label for="color">
+                        Cor do Jeep
+                        <small>
+                            (proximada)
+                        </small>
+                    </label>
+                    <input type="color" name="color" id="color" class="block" aria-labelledby="color"></input>
                     <div class="box-input">
-                        <label for="purchase_date">Data da compra<span class="required-field">*</span></label>
-                        <input type="date" name="purchase_date" id="purchase_date" class="block" required></input>
+                        <label for="purchase_date">
+                            Data da compra
+                            <span class="required-field">
+                                *
+                            </span>
+                        </label>
+                        <input type="date" name="purchase_date" id="purchase_date" class="block"
+                            aria-labelledby="purchase date" required>
+                        </input>
                     </div>
                     <div class="box-input">
-                        <p>Tipo de câmbio:<span class="required-field">*</span></p>
-                        <input type="radio" name="gear" id="manual" required></input>
+                        <p>Tipo de câmbio:
+                            <span class="required-field">
+                                *
+                            </span>
+                        </p>
+                        <input type="radio" name="gear" id="manual" aria-labelledby="manual" required></input>
                         <label for="manual">Manual</label>
-                        <input type="radio" name="gear" id="auto" required></input>
+                        <input type="radio" name="gear" id="auto" aria-labelledby="auto" required></input>
                         <label for="auto">Automatico</label>
                     </div>
 
@@ -75,77 +128,69 @@
                         <p>Opcionais</p>
                         <ul class="optional-list">
                             <li>
-                                <input type="checkbox" name="opcional[]" id="airbag">
+                                <input type="checkbox" name="airbag" id="airbag" aria-labelledby="airbag">
                                 <label for="airbag">Airbag</label>
                             </li>
                             <li>
-                                <input type="checkbox" name="opcional[]" id="alam">
+                                <input type="checkbox" name="alam" id="alam" aria-labelledby="alam">
                                 <label for="alarm">Alarme</label>
                             </li>
                             <li>
-                                <input type="checkbox" name="opcional[]" id="ac">
+                                <input type="checkbox" name="ac" id="ac" aria-labelledby="ac">
                                 <label for="ac">Ar Condicionado</label>
                             </li>
                             <li>
-                                <input type="checkbox" name="opcional[]" id="reverse_camera">
+                                <input type="checkbox" name="reverse_camera" id="reverse_camera"
+                                    aria-labelledby="reverse camera">
                                 <label for="reverse_camera">Câmera de Ré</label>
                             </li>
                         </ul>
                     </div>
                     <div class="optional-box">
                         <ul class="optional-list">
-
                             <li>
-                                <input type="checkbox" name="opcional[]" id="lane_assist">
+                                <input type="checkbox" name="lane_assist" id="lane_assist"
+                                    aria-labelledby="lane assist">
                                 <label for="lane_assist">Assistente de Pista</label>
                             </li>
                             <li>
-                                <input type="checkbox" name="opcional[]" id="keyless">
+                                <input type="checkbox" name="keyless" id="keyless" aria-labelledby="keyless">
                                 <label for="keyless">Partida Keyless</label>
                             </li>
                             <li>
-                                <input type="checkbox" name="opcional[]" id="smartphone">
+                                <input type="checkbox" name="smartphone" id="smartphone" aria-labelledby="smartphone">
                                 <label for="smartphone">Integração com Celular</label>
                             </li>
                             <li>
-                                <input type="checkbox" name="opcional[]" id="leather_bench">
+                                <input type="checkbox" name="leather_bench" id="leather_bench"
+                                    aria-labelledby="leather bench">
                                 <label for="leather_bench">Banco de Couro</label>
                             </li>
                         </ul>
                     </div>
                     <div class="box-input">
-                        <p>Fotos do carro: <span class="required-field">*</span></p>
-                        <input id="files" type="file" accept="image/jpg, image/jpge, image/png, image/webp" multiple>
+                        <p>Fotos do carro:
+                            <span class="required-field">
+                                *
+                            </span>
+                        </p>
+                        <input id="files" type="file" accept="image/jpg, image/jpge, image/png, image/webp"
+                            aria-labelledby="send image" multiple>
                         <div id="preview"></div>
-                        <script>
-                            const preview = (file) => {
-                                const fr = new FileReader();
-                                fr.onload = () => {
-                                    const img = document.createElement("img");
-                                    img.src = fr.result;
-                                    img.alt = file.name;
-                                    document.querySelector('#preview').append(img);
-                                };
-                                fr.readAsDataURL(file);
-                            };
-
-                            document.querySelector("#files").addEventListener("change", (ev) => {
-                                if (!ev.target.files) return;
-                                [...ev.target.files].forEach(preview);
-                            });
-                        </script>
+                        <script src="app.js"></script>
                     </div>
-                    <input type="submit" value="Enviar" class="btn-submit">
+                    <input type="submit" value="Enviar" class="btn-submit" aria-labelledby="submit">
                 </form>
             </div>
 
         </div>
         <div class="ads">
             <img class="desk-ads" src="./assets/ads.webp" alt="ads jeep">
-            <img class="mobile-ads" src="assets/content-pmb.webp" alt="">
+            <img class="mobile-ads" src="assets/content-pmb.webp" alt="ads jeep mobile">
         </div>
         <div class="info-text-jeep">
-            <p>Desenvolvido para afins de teste por Gabriel Gonçalves Cunha, confira as informações e ofertas reais no   site oficial Jeep
+            <p>Desenvolvido para afins de teste por Gabriel Gonçalves Cunha, confira as informações e ofertas reais no
+                site oficial Jeep
             </p>
             <p> Taxa Zero + Tabela Fipe Renegade, Compass e Commander.</p>
             <p>Taxa de financiamento de 0% a.m., é válida para todas as versões Renegade 24/25 exceto 1.3 turbo.
@@ -153,32 +198,41 @@
                 valor do veículo e saldo em 36 parcelas. Válido até 03/10/2024 ou enquanto durar o estoque de 50
                 unidades de cada modelo, prevalecendo o que ocorrer primeiro. O financiamento deverá ser realizado na
                 modalidade Crédito Direto ao Consumidor – CDC, Pessoa Física, com 30 dias de carência para pagamento da
-                1ª parcela e será acrescido o valor das tarifas, custos e impostos (I.O.F.).</p>
+                1ª parcela e será acrescido o valor das tarifas, custos e impostos (I.O.F.).
+            </p>
             <p>Todas as propostas estarão
                 sujeitas a aprovação de crédito. Consulte as condições gerais, tarifa, taxa de juros, encargos e o Custo
                 Efetivo Total (CET) do financiamento antes da contratação em qualquer uma das concessionárias
-                participantes. Condição exclusiva para canal Varejo.</p>
+                participantes. Condição exclusiva para canal Varejo.
+            </p>
             <p>Todas as ações divulgadas acima não contemplam veículos adquiridos por meio de modalidades de vendas
                 diretas, incluindo, mas sem se limitar, produtor rural, PCD, frota, taxista, locadoras, leilões e
-                seguradoras.</p>
+                seguradoras.
+            </p>
             <p>A ação está sujeita a alteração sem aviso prévio. Consulte as configurações e
                 características dos modelos disponíveis em estoque em demais termos e condições em uma Concessionária
-                Jeep. Central de Relacionamento: 0800 7037 150. Imagens meramente ilustrativas.</p>
-            <p>Condição “100% FIPE” RENEGADE, COMPASS E COMMANDER</p>
+                Jeep. Central de Relacionamento: 0800 7037 150. Imagens meramente ilustrativas.
+            </p>
+            <p>Condição “100% FIPE” RENEGADE, COMPASS E COMMANDER
+
+            </p>
             <p>Avaliação de 100% da FIPE no seu seminovo de qualquer marca. Condição válida para a compra dos veículos
                 Renegade Longitude 24/25 e anteriores (condição válida também para o pacote Night Eagle 611-1LG-1 + OPT
-                BW4), Compass na versão Série S e Commander na versão Overland Hurricane.</p>
+                BW4), Compass na versão Série S e Commander na versão Overland Hurricane.
+            </p>
             <p>Oferta válida exclusivamente
                 para pessoa física que adquirir, na modalidade varejo, entre o período até 03/10/2024, ou enquanto durar
                 o estoque de 100 unidades para pronta entrega, prevalecendo o que ocorrer primeiro. Consulte o estoque
-                diretamente nas concessionárias JEEP. Frete incluso.</p>
+                diretamente nas concessionárias JEEP. Frete incluso.
+            </p>
             <p>O veículo seminovo que atender os critérios abaixo relacionados será avaliado no valor da Tabela FIPE
                 (dados de referência de Agosto de 2024) limitado ao valor de R$140.000,00. O veículo seminovo deve,
                 necessariamente, enquadrar-se nos seguintes critérios: Ano de fabricação a partir de 2020, com no máximo
                 10.000 KM rodados por ano (considerando-se a média da quilometragem), em boas condições, pintura
                 original, sem avarias e/ou problemas mecânicos, com todas as revisões de fábrica realizadas nas
                 concessionárias e anotadas no manual e que tenha sido aprovado nos Laudos de Vistoria Veicular (EVC e
-                Cautelar). O Seminovo dado como parte de pagamento deverá estar com o IPVA 2024 quitado.</p>
+                Cautelar). O Seminovo dado como parte de pagamento deverá estar com o IPVA 2024 quitado.
+            </p>
             <p>Caso o cliente opte pela compra de um modelo ou versão de veículo JEEP 0KM abaixo do valor atribuído à
                 FIPE do seu veículo usado, lhe será concedido pela concessionária um voucher com o crédito
                 correspondente à diferença entre valor do veículo novo e usado. O crédito deverá ser utilizado,
@@ -192,104 +246,109 @@
                 promoção os casos em que o automóvel usado esteja em nome de Pessoa Física diferente daquela que está
                 adquirindo o veículo zero Km. No caso de o veículo usado estar em nome de parente de primeiro grau
                 (esposa/marido/filho, filha/ pai ou mãe), o vínculo dessas pessoas deverá ser comprovado por meio de
-                documentação complementar. Não serão aceitos outros níveis de parentesco que os citados acima.</p>
+                documentação complementar. Não serão aceitos outros níveis de parentesco que os citados acima.
+            </p>
         </div>
         <footer>
             <div class="footer-container">
                 <div class="footer-content">
-                    <h3>Modelos</h3>
+                    <h2>Modelos</h2>
                     <ul>
-                        <li><a href="">RENEGADE</a></li>
-                        <li><a href="">COMPASS</a></li>
-                        <li><a href="">COMPASS HIBRIDO 4XE</a> </li>
-                        <li><a href="">COMMANDER</a></li>
-                        <li><a href="">WRANGLER</a></li>
-                        <li><a href="">GLADIATOR</a></li>
-                        <li><a href="">GRAND CHEROKEE 4XE</a> </li>
+                        <li><a href="#">RENEGADE</a></li>
+                        <li><a href="#">COMPASS</a></li>
+                        <li><a href="#">COMPASS HIBRIDO 4XE</a> </li>
+                        <li><a href="#">COMMANDER</a></li>
+                        <li><a href="#">WRANGLER</a></li>
+                        <li><a href="#">GLADIATOR</a></li>
+                        <li><a href="#">GRAND CHEROKEE 4XE</a> </li>
                     </ul>
                 </div>
                 <div class="footer-content">
-                    <h3>Híbrido</h3>
+                    <h2>Híbrido</h2>
                     <ul>
-                        <li><a href="">Compass Híbirdo 4xe</a></li>
-                        <li><a href="">Grand Cherokee 4xe</a></li>
-                        <li><a href="">Tecnologia 4xe</a> </li>
+                        <li><a href="#">Compass Híbirdo 4xe</a></li>
+                        <li><a href="#">Grand Cherokee 4xe</a></li>
+                        <li><a href="#">Tecnologia 4xe</a> </li>
                     </ul>
                 </div>
                 <div class="footer-content">
-                    <h3>Mundo Jeep</h3>
+                    <h2>Mundo Jeep</h2>
                     <ul>
-                        <li><a href="">Jeep Life</a></li>
-                        <li><a href="">Jeep Wave</a></li>
-                        <li><a href="">Jeep Nature</a> </li>
-                        <li><a href="">Jeep Rated</a></li>
-                        <li><a href="">Trail Rated</a></li>
-                        <li><a href="">Jeep por assinatura</a></li>
-                        <li><a href="">História</a> </li>
-                        <li><a href="">Fábrica</a> </li>
+                        <li><a href="#">Jeep Life</a></li>
+                        <li><a href="#">Jeep Wave</a></li>
+                        <li><a href="#">Jeep Nature</a> </li>
+                        <li><a href="#">Jeep Rated</a></li>
+                        <li><a href="#">Trail Rated</a></li>
+                        <li><a href="#">Jeep por assinatura</a></li>
+                        <li><a href="#">História</a> </li>
+                        <li><a href="#">Fábrica</a> </li>
                     </ul>
                 </div>
                 <div class="footer-content">
-                    <h3>Comprar</h3>
+                    <h2>Comprar</h2>
                     <ul>
-                        <li><a href="">Ofertas Jeep</a></li>
-                        <li><a href="">Serviços financeiros</a></li>
-                        <li><a href="">Financiamentos</a> </li>
-                        <li><a href="">Seguros</a></li>
-                        <li><a href="">Next Jeep</a></li>
-                        <li><a href="">Jeep Card</a></li>
+                        <li><a href="#">Ofertas Jeep</a></li>
+                        <li><a href="#">Serviços financeiros</a></li>
+                        <li><a href="#">Financiamentos</a> </li>
+                        <li><a href="#">Seguros</a></li>
+                        <li><a href="#">Next Jeep</a></li>
+                        <li><a href="#">Jeep Card</a></li>
                     </ul>
                 </div>
                 <div class="footer-content">
-                    <h3>Proprietários</h3>
+                    <h2>Proprietários</h2>
                     <ul>
-                        <li><a href="">Garantia Ampliada</a></li>
-                        <li><a href="">Agende seus Serviços</a></li>
-                        <li><a href="">Portal do Proprietário</a></li>
-                        <li><a href="">Adventure Intelligence</a></li>
-                        <li><a href="">Blindagem</a></li>
-                        <li><a href="">Revisões Programadas</a></li>
-                        <li><a href="">Pacote de Serviços</a></li>
-                        <li><a href="">Jeep Authentic</a></li>
-                        <li><a href="">Accessories</a></li>
-                        <li><a href="">Express Lane</a></li>
-                        <li><a href="">Cuide bem Jeep</a></li>
-                        <li><a href="">Manual de Segurança no Trânsito</a></li>
-                        <li><a href="">Manuais Jeep</a></li>
-                        <li><a href="">Identificação de Veículos</a></li>
-                        <li><a href="">Recall</a></li>
-                        <li><a href="">Privilege Service</a></li>
-                        <li><a href="">Central de Serviços ao Cliente</a></li>
-                        <li><a href="">Sobre a Mopar</a></li>
-                        <li><a href="">Atualização de Softwares</a></li>
+                        <li><a href="#">Garantia Ampliada</a></li>
+                        <li><a href="#">Agende seus Serviços</a></li>
+                        <li><a href="#">Portal do Proprietário</a></li>
+                        <li><a href="#">Adventure Intelligence</a></li>
+                        <li><a href="#">Blindagem</a></li>
+                        <li><a href="#">Revisões Programadas</a></li>
+                        <li><a href="#">Pacote de Serviços</a></li>
+                        <li><a href="#">Jeep Authentic</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Express Lane</a></li>
+                        <li><a href="#">Cuide bem Jeep</a></li>
+                        <li><a href="#">Manual de Segurança no Trânsito</a></li>
+                        <li><a href="#">Manuais Jeep</a></li>
+                        <li><a href="#">Identificação de Veículos</a></li>
+                        <li><a href="#">Recall</a></li>
+                        <li><a href="#">Privilege Service</a></li>
+                        <li><a href="#">Central de Serviços ao Cliente</a></li>
+                        <li><a href="#">Sobre a Mopar</a></li>
+                        <li><a href="#">Atualização de Softwares</a></li>
                     </ul>
                 </div>
                 <div class="footer-content">
-                    <h3>Vendas diretas</h3>
+                    <h2>Vendas diretas</h2>
                     <ul>
-                        <li><a href="">Pessoa com Deficiência</a></li>
-                        <li><a href="">CNPJ e Microempresário</a></li>
-                        <li><a href="">Produtor Rural</a> </li>
-                        <li><a href="">Governo</a></li>
-                        <li><a href="">Locadora</a></li>
+                        <li><a href="#">Pessoa com Deficiência</a></li>
+                        <li><a href="#">CNPJ e Microempresário</a></li>
+                        <li><a href="#">Produtor Rural</a> </li>
+                        <li><a href="#">Governo</a></li>
+                        <li><a href="#">Locadora</a></li>
                     </ul>
                 </div>
                 <div class="footer-content">
-                    <h3>Siga nos</h3>
+                    <h2>Siga nos</h2>
                     <div class="footer-hub">
-                        <a href="" class="facebook"></a>
-                        <a href="" class="instagram"></a>
-                        <a href="" class="x"></a>
-                        <a href="" class="youtube"></a>
+                        <a href="https://www.facebook.com/" class="facebook"></a>
+                        <a href="https://www.instagram.com/" class="instagram"></a>
+                        <a href="https://x.com/" class="x"></a>
+                        <a href="https://www.youtube.com/" class="youtube"></a>
                     </div>
                 </div>
             </div>
             <div class="footer-copy">
-                <p>- Desenvolvido para afins de teste por <a href="https://www.linkedin.com/in/gabriel-gon%C3%A7alves-cunha-37347b305/" target="_blank" >Gabriel Gonçalves Cunha</a>  | 2024</h3>
+                <p>- Desenvolvido para afins de teste por
+                    <a href="https://www.linkedin.com/in/gabriel-gon%C3%A7alves-cunha-37347b305/" target="_blank">
+                        Gabriel Gonçalves Cunha
+                    </a>
+                    | 2024
+                </p>
             </div>
-
         </footer>
-    </div>
+    </section>
 </body>
 
 </html>
